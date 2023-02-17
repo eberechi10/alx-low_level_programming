@@ -24,5 +24,5 @@ else
 	{
 		printf("%d is negative\n", n);
 	}
-	retune (0);
+	return (0);
 }
