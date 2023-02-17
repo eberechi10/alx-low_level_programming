@@ -9,7 +9,8 @@
  */
 int main(void)
 {
-	int n, x;
+	int n,
+	int x;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
@@ -24,7 +25,7 @@ int main(void)
 	}
 	else
 	{
-		printf("last digit of %d is %d and is less than 6 and is not 0\n", n) ( x));
+		printf("last digit of %d is %d and is less than 6 and is not 0\n", n, x);
 	}
 	return (0);
 }
