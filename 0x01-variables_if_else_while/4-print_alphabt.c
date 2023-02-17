@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main = print all alphabets but 'q' and e.
+ * main - print all alphabets but 'q' and e.
  *
  * Return: Always 0 (Success)
  */
@@ -18,6 +18,7 @@ int main(void)
 	putchar('\n');
 
 	return (0);
+
 
 }
 
