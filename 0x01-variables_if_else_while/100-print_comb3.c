@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- *main -  print all possible combination of two difference numbers.
+ *main - print all possible combination of two difference numbers.
  *
  * Return: Always 0 (Success)
  */
@@ -8,7 +8,7 @@ int main(void)
 {
 	int i, j, k;
 
-	i = 0
+	i = 0;
 
 		while (i < 100)
 		{
