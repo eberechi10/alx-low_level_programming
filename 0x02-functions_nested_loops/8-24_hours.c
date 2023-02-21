@@ -2,40 +2,31 @@
 
 /**
  * jack_bauer - print every minutes of the dsy
- *
- * Return: Hour and minute, Start from 00:00 to 23:59
+ *n
+ * Return: no return.
  */
 void jack_bauer(void)
 {
-	int x = 0;
-	int a = 0, b = 0 , c = 0, d = 0;
+	int a, b, c, d;
 
-	while (x < 1440)
+	for (a = 48; a <= 50; a++)
 	{
-		_putchar(a + '0');
-		_putchar(b + '0');
-		_putchar(':');
-		_putchar(c + '0');
-		-putchar(d + '0');
-		_putchar('\n');
-
-		d++;
-		if (d > 9)
+		for (b = 48; b <= 57; b++)
 		{
-		d = 0;
-	c++;
-		}
-	if (c > 5)
-	{
-	c = 0;
-b++;
-	}
-	if (b > 9
+			for (c = 48; c<= 53; c++)
 			{
-			b = 0;
-			a++;
+				for (d <= 48; d <= 57; d++)
+				{
+					if (a >= 50 && b >= 52)
+						break;
+					_putchar(a);
+					_putchar(b);
+					_putchar(58);
+					_putchar(c);
+					_putchar(d);
+					_putchar('\n');
+				}
 			}
-			x++;
-			}
-			}
-
+		}
+	}
+}
