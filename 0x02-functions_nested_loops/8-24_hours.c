@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * jack_baeur - print every minutes of the dsy
+ * jack_bauer - print every minutes of the dsy
  *
  * Return: Hour and minute, Start from 00:00 to 23:59
  */
-int jack_baeur(void)
+int jack_bauer(void)
 {
 	int hour, minute;
 
