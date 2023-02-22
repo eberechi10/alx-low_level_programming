@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * pribt_to_98 - print all natural numbers.
+ * print_to_98 - print all natural numbers.
  * @n: Input number.
  *
  * Return: no retun.
