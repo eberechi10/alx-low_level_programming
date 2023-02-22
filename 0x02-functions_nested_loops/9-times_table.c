@@ -5,7 +5,7 @@
  *
  * Return: 0
  */
-void tines_table(void)
+void times_table(void)
 {
 	int x = 0; /* factor */
 	int y; /* count */
@@ -36,7 +36,7 @@ void tines_table(void)
 				_putchar(',');
 				_putchar(' ');
 			}
-			y++
+			y++;
 		}
 		-putchar('\n');
 		x++;
