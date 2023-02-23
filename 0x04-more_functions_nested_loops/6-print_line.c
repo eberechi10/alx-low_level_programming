@@ -1,21 +1,20 @@
 #include "main.h"
 
 /**
- * print_line - draw a straight line.
- * @n: number of times.
+ * print_line - printing lines
+ * @n: number of times
  *
- * Return: use only _putchar to print
+ * Return: void
  */
+
+
 void print_line(int n)
 {
-	int c;
+	int i;
 
-	c = 0;
-	while ( c < n)
+	for (i = 0; i < n; i++)
 	{
 		_putchar('_');
-
-		c++;
 	}
 	_putchar('\n');
 }
