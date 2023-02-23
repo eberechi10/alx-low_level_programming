@@ -1,26 +1,23 @@
 #include "main.h"
 
 /**
- * more_numbers - ptrint 10 times the numbers from 0 - 14.
- *
- * Return: you can use _putchar 3 times.
+ * more_numbers - nmbr fct
+ * Bwave ICT file
+ * Return: no return
  */
+
 void more_numbers(void)
 {
-	int c, i;
 
-	c = 0;
-	while (c < 10)
+int i, j;
+	for (i = 1; i <= 10; i++)
 	{
-		i = 0;
-		while (i < 15)
+		for (j = 0; j <= 14; j++)
 		{
-			if (i > 9)
-
-				_putchar(i / 10 + '0'0);
-			i++;
+			if (j >= 10)
+			_putchar('1');
+			_putchar(j % 10 + '0');
 		}
-		c++;
-		_putchar('\n');
-	}
+			_putchar('\n');
+		}
 }
