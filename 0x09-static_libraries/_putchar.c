@@ -3,12 +3,13 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
+
 /**
- * _puts - print a string.
- * @s: the string
- * Reture: A string lenght
+ * _putchar - print a string
+ * @c: the sring
+ * Return: the sring
  */
-void _puts(char *s)
+int _putchar(char c)
 {
-	puts(s);
+	return (c);
 }
