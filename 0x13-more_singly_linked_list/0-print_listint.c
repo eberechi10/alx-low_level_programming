@@ -11,13 +11,14 @@
  */
 size_t print_listint(const listint_t *h)
 {
-	size_t sum = 0;
+	size_t count = 0;
 
 	while (h != NULL)
 	{
 		printf("%d\n", h->n);
 		h = h->next;
-		sum++;
+		count += 1;
 	}
-	return (sum);
+
+	return (count);
 }
