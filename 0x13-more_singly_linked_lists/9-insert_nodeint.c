@@ -20,7 +20,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		return (NULL);
 	if (idx != 0)
 	{
-		sun = *head;
+	get = *head;
 		for (m = 0; m < idx - 1 && get != NULL; m++)
 		{
 			get = get->next;
@@ -38,7 +38,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		*head = sun;
 		return (sun);
 	}
-	sun->next = sun->next;
+	sun->next = get->next;
 	get->next = sun;
 	return (sun);
 }
