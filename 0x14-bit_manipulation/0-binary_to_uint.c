@@ -10,10 +10,10 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int count;
+	unsigned int sun;
 	int m;
-	
-	count = 0;
+
+	sun = 0;
 	if (b == null)
 		return (0);
 	for (m = 0; b[m] != '\0'; m++)
@@ -23,9 +23,9 @@ unsigned int binary_to_uint(const char *b)
 	}
 	for (m = 0; b[m] != '\0'; m++)
 	{
-		count <<= 1;
+		sun <<= 1;
 		if (b[m] == '1')
 			count += 1;
 	}
-	return (count);
+	return (sun);
 }
