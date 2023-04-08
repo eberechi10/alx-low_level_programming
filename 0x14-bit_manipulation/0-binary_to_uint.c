@@ -11,22 +11,23 @@
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int count;
-	unsigned int sun;
 	int m;
 
-	if (b == NULL)
+	if (b == null)
 		return (0);
 
 
-	for (m = 0; b[m]; m++)
+	for (m = 0; b[m] != '\0'; m++)
 	{
 		if (b[m] != '0' && b[m] != '1')
 			return (0);
 	}
 
 
-	for (sun = 1, count = 0, m--; m >= 0; m--, sun *= 2)
+	for (m = 0; b[m] != '\0'; m++)
 	{
+
+		count <<= 1;
 		if (b[m] == '1')
 			count += 1;
 	}
