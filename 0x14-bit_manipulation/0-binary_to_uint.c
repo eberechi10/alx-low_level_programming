@@ -1,8 +1,7 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * binary_to_uint - a funtion to convert a binary
+ * binary_to_uint - convert a binary to an unsigned int.
  *
  * @b: it is a string
  *
@@ -14,7 +13,7 @@ unsigned int binary_to_uint(const char *b)
 	int m;
 
 	sun = 0;
-	if (b == null)
+	if (!b)
 		return (0);
 	for (m = 0; b[m] != '\0'; m++)
 	{
@@ -25,7 +24,7 @@ unsigned int binary_to_uint(const char *b)
 	{
 		sun <<= 1;
 		if (b[m] == '1')
-			count += 1;
+			sun += 1;
 	}
 	return (sun);
 }
