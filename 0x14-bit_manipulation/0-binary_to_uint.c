@@ -13,6 +13,8 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int count;
 	int m;
 
+
+	count = 0;
 	if (b == null)
 		return (0);
 
