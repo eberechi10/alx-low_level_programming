@@ -3,41 +3,64 @@
 #include <stdio.h>
 
 /**
- * print_listint_safe - fuction to print a linked list.
+ * listint_t **_r - function to reallocates memory
+ * @list: it is the linked list
  *
- * @head: is the head of list
- * 
- * go through the list only once.
- * Return: number of nodes in list. exit with status 98 if failed.
+ * @size: size of the linked list
+ * @new: the node to added
  *
+ * Return: the list
+ */
+const listint_t **_r(const listint_t **list, size_t size, const listint_t *new)
+{
+	const listint_t **current;
+	size_t m;
+
+
+	current = malloc(size * sizeof(listint_t *));
+	if (current == NULL)
+	{
+		free(list);
+		exit(98);
+	}
+	for (m = 0; m < size - 1; m++)
+		current[m] = list[m];
+	current[m] = new;
+	free(list);
+	return (current);
+}
+
+
+/**
+ * print_listint_safe - the function to print a list.
+ * @head: it is the head of the list
+ *
+ * Return: the number of nodes in the list
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	const listint_t *get, *new;
-	size_t sum;
+	size_t m;
+	size_t count = 0;
+	const listint_t **sun = NULL;
 
-	new = head;
-	if (new == NULL)
-		exit(98);
-
-
-	sum = 0;
-	while (new != NULL)
+	while (head != NULL)
 	{
-		get = new;
-		new = new->next;
-		sum++;
-		printf("[%p] %d\n", (void *)get, get->n);
-
-
-
-		if (get < new)
+		for (m = 0; m < count; m++)
 		{
-			printf("-> [%p] %d\n", (void *)new, new->n);
-			break;
+			if (head == sun[m])
+			{
+				printf("-> [%p] %d\n", (void *)head, head->n);
+				free(sun);
+				return (count);
+			}
 		}
+
+		count++;
+		sun = _r(sun, count, head);
+		printf("[%p] %d\n", (void *)head, head->n);
+		head = head->next;
 	}
-
-
-	return (sum);
+	
+	free(sun);
+	return (current);
 }
