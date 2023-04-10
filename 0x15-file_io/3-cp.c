@@ -26,7 +26,7 @@ int main(int agc, char *agv[])
 	fd_i = open(agv[1], O_RDONLY);
 	if (fd_i == -1)
 		dprintf(SE, "Error: Can't read from file %s\n", agv[1]), exit(98);
-	fd_o = open(agv[2], O_CREAT | O_WRONLY | O_TRUNC, mode);
+	fd_o = open(agv[2], O_CREAT | O_WRONLY | O_TRUNC, get);
 	if (fd_o == -1)
 		dprintf(SE, "Error: Can't write to %s\n", agv[2]), exit(99);
 	do {
