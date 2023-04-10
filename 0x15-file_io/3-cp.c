@@ -17,7 +17,7 @@
 int main(int agc, char *agv[])
 {
 	int fd_i, fd_o, s_i, s_o;
-	char buf[MAXSIZE];
+	char buffer[1024];
 	mode_t get;
 
 	get = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
@@ -30,7 +30,7 @@ int main(int agc, char *agv[])
 	if (fd_o == -1)
 		dprintf(SE, "Error: Can't write to %s\n", agv[2]), exit(99);
 	do {
-		s_i = read(fd_i, buf, MAXSIZE);
+		s_i = read(fd_i, buffer, 1024);
 		if (s_i == -1)
 		{
 			dprintf(SE, "Error: Can't read from file %s\n", agv[1]);
@@ -38,7 +38,7 @@ int main(int agc, char *agv[])
 		}
 		if (s_i > 0)
 		{
-			s_o = write(fd_o, buf, (ssize_t) s_i);
+			s_o = write(fd_o, buffer, (ssize_t) s_i);
 			if (s_o == -1)
 			{
 				dprintf(SE, "Error: Can't write to %s\n", agv[2]);
