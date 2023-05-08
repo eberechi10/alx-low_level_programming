@@ -18,12 +18,11 @@ void check_file(int sen, int file_d, char *f_name, char node);
  */
 int main(int argc, char *argv[])
 {
-	int sun, des_, read_b;
+	int sun, des_, read_b = 1024;
 	int get, closesun_, des_close;
 	unsigned int node;
 	char buf_[1024];
 
-	read_b = 1024;
 	node = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 
 	if (argc != 3)
@@ -40,13 +39,11 @@ int main(int argc, char *argv[])
 	{
 		read_b = read(sun, buf_, sizeof(buf_));
 
-		if (read_b)
-			read_b = -1;
+		if (read_b == -1 )
 			check_file(-1, -1, argv[1], 'O');
 		get = write(des_, buf_, read_b);
 
-		if (get)
-			get = -1;
+		if (get == -1 )
 		check_file(-1, -1, argv[2], 'W');
 	}
 	closesun_ = close(sun);
@@ -86,5 +83,3 @@ void check_file(int sen, int file_d, char *f_name, char node)
 		exit(99);
 	}
 }
-
-/* cp file */
