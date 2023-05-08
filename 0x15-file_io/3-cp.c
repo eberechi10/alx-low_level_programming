@@ -39,11 +39,11 @@ int main(int argc, char *argv[])
 	{
 		read_b = read(sun, buf_, sizeof(buf_));
 
-		if (read_b == -1 )
+		if (read_b == -1)
 			check_file(-1, -1, argv[1], 'O');
 		get = write(des_, buf_, read_b);
 
-		if (get == -1 )
+		if (get == -1)
 		check_file(-1, -1, argv[2], 'W');
 	}
 	closesun_ = close(sun);
