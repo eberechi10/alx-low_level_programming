@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * get_dnodeint_at_index - gets a node in dlistint_t 
+ * get_dnodeint_at_index - gets a node in dlistint_t.
  *
  * @head: the dlistint_t list head.
  * @index: node to get.

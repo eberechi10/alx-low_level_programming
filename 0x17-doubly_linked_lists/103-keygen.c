@@ -31,7 +31,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	password[2] = codex[(elm ^ 85) & 63];
 
 	elm = 0;
-	for (index = 0; index < len; index++)
+	for (index = 0; index < lenght; index++)
 	{
 		if (argv[1][index] > elm)
 			elm = argv[1][index];
@@ -40,7 +40,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	password[3] = codex[rand() & 63];
 
 	elm = 0;
-	for (index = 0; index < len; i++)
+	for (index = 0; index < lenght; index++)
 		elm += (argv[1][index] * argv[1][index]);
 	password[4] = codex[(elm ^ 239) & 63];
 
