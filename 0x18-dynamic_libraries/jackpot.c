@@ -3,6 +3,7 @@
 int printf(__attribute__((unused))const char *format, ...)
 {
 	static int ptr;
+
 	if (!ptr)
 		write(1, "9 8 10 24 75 - 9\n", 17);
 
