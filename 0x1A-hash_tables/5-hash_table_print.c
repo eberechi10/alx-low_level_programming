@@ -9,8 +9,8 @@
  */
 void hash_table_print(const hash_table_t *ht)
 {
-	hash_node_t *elm;
 	unsigned long int idx;
+	hash_node_t *elm;
 	char *tab;
 
 	if (ht == NULL)

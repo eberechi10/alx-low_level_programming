@@ -10,20 +10,21 @@
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
+        unsigned long int idx;
 	hash_node_t *ht_bot;
-	unsigned long int idx;
 
-	if (!ht || !key || !(*key))
-		return (NULL);
+        if (!ht || !key || !(*key))
+                return (NULL);
 
-	ht_bot = ht->array[idx];
+	idx = key_index((const unsigned char *)key, ht->size);
+        ht_bot = ht->array[idx];
 
-	while (ht_bot)
-	{
-		if (strcmp(ht_bot->key, key) == 0)
-			return (ht_bot->value);
+        while (ht_bot)
+        {
+                if (strcmp(ht_bot->key, key) == 0)
+                        return (ht_bot->value);
 
-		ht_bot = ht_bot->next;
-	}
-	return (NULL);
+                ht_bot = ht_bot->next;
+        }
+        return (NULL);
 }
