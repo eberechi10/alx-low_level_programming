@@ -21,7 +21,7 @@ void hash_table_print(const hash_table_t *ht)
 
 	for (idx = 0; idx < ht->size; idx++)
 	{
-		elm = ht->array[i];
+		elm = ht->array[idx];
 
 		while (elm != NULL)
 		{
