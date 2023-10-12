@@ -1,11 +1,11 @@
 #include "search_algos.h"
 
 /**
-  * _binary_search - search for value in sorted array with binary search.
- *
+  * binary_search_h - search for value in sorted array with binary search.
+  *
   * @array: the array to search.
   * @left: the left sub array.
-
+  *
   * @right: the right sub array.
   * @value: the value to search.
   *
